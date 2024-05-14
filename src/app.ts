@@ -6,9 +6,9 @@ import { AppRoutes, Server } from "./models";
     await connectDB();
 
     const server = new Server({
-        https_cert: "",
-        https_key: "",
-        isHttps: false,
+        https_cert: envs.HTTPS_CERT,
+        https_key: envs.HTTPS_KEY,
+        isHttps: envs.HTTPS,
         port: envs.PORT,
         routes: AppRoutes.routes,
     });
