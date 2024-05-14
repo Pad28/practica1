@@ -7,7 +7,7 @@ export class AppRoutes {
         const router = Router();
         
         router.use("/api/empleado", EmpleadoRoutes.routes);
-        router.use("/api/auht", AuthRoutes.routes);
+        router.use("/api/auth", AuthRoutes.routes);
 
         return router;
     }
