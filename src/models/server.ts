@@ -37,6 +37,8 @@ export class Server {
         this.app.get("*", (req, res) => res.send("<h1>404 | Not Found</h1>"));
         
         if(this.options.isHttps) {
+            console.log("IS_HTTPS");
+            
             const httpsOptions = {
                 key: fs.readFileSync(this.options.https_key),
                 cert: fs.readFileSync(this.options.https_cert),
